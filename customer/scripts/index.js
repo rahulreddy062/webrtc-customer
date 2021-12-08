@@ -135,7 +135,7 @@ function goToVideoChat() {
     try {
       userMediaStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
       
-      signaling = new WebSocket('wss://soft-sloth-83.loca.lt');
+      signaling = new WebSocket('wss://videochat-app-bj.herokuapp.com');
       setTimeout(function(){peerConnection = createPeerConnection();
 
       addMessageHandler();
