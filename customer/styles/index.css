@@ -1,0 +1,482 @@
+@font-face {
+  font-family: 'verizonFont';
+  src: URL('./VERIZONNHGEDS-REGULAR.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'verizonBoldFont';
+  src: URL('./VERIZONNHGEDS-BOLD.TTF') format('truetype');
+}
+
+html,
+body {
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  margin: 0%;
+  background-color: white;
+  font-family: verizonFont;
+}
+
+h1{
+    margin:2px !important;
+    font-size: 32px !important;
+    text-align: justify;
+}
+
+h2{
+    margin:2px !important;
+    font-size: 28px !important;
+    text-align: justify;
+}
+
+h3{
+    margin:2px !important;
+    font-size: 24px !important;
+    text-align: justify;
+}
+
+h4{
+    margin:2px !important;
+    font-size: 22px !important;
+    font-weight: 500;
+    text-align: justify;
+}
+
+h5{
+    margin: 2px !important;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
+}
+
+h6{
+    margin:2px !important;
+    font-size: 15px !important;
+    color: grey;
+    text-align: justify;
+}
+
+p{
+    margin: 2px !important;
+    color: white;
+    text-align: justify;
+}
+
+.block{
+    display: block;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  height: 400px;
+}
+
+/* top images */
+.introImage{
+    width: 100%;
+    height:400px;
+}
+
+/* Create two equal columns and one large column that floats next to each other */
+.outerColumn {
+    float: left;
+    width: 28%;
+    padding-top: 10px;
+    min-height: 800px;
+}
+
+.grey{
+    background-color: #f2f2f2;
+}
+
+.white{
+    color:white;
+}
+
+.container{
+    padding: 20px;
+    padding-right:40px;
+    padding-top:0px;
+}
+
+.spaceBetween{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.addSpace{
+    height: 20px !important;
+}
+
+.actionLink{
+    font-weight: bold;
+    padding-left: 5px;
+    font-family: verizonBoldFont;
+}
+
+.actionLink:hover{
+   cursor: pointer;
+}
+
+.ratingRow {
+   display:flex;
+   margin-left: 20px;
+}
+
+.ratingText{
+   padding-right: 15px;
+}
+
+.checked {
+    color: black;
+    padding-left: 3px;
+}
+
+.unchecked {
+    color: grey;
+    padding-left: 3px;
+}
+
+.innerColumn {
+    float: left;
+    width: 44%;
+    min-height: 800px;
+}
+
+.mapContainer{
+    padding:20px;
+    padding-bottom: 0px !important;
+}
+
+.googleMap{
+    padding: 5px;
+    min-height: 780px;
+    width:100%
+}
+
+#iconSize{
+    font-size: 18px;
+}
+
+#textAlignedIcon{
+    font-size:25px;
+    padding-top: 3px;
+}
+
+.iconAlignedText{
+    font-weight: bold;
+    padding-left: 5px;
+    font-size: 18px;
+    vertical-align: middle;
+    font-family: verizonBoldFont;
+}
+
+#coloredIcon{
+    font-size:15px;
+    color:green;
+}
+
+
+/* open video call form */
+select{
+    background-color: transparent;
+     color: #eeeeee;
+     outline: none;
+     outline-style: none;
+     border-top: none;
+     border-left: none;
+     border-right: none;
+     border-bottom: 2px solid white;
+     padding: 3px 10px;
+     margin-top: 50px;
+     width: 520px;
+     font-size: 20px;
+ }
+
+.openVideoCallForm{
+    width: 90%;
+    height: 90%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+.hideElement{
+    display: none;
+}
+
+.logoImage{
+    width: 150px;
+    height:50px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.alignCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding:50px 150px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+}
+
+input{
+    background-color: transparent;
+     color: #eeeeee;
+     outline: none;
+     outline-style: none;
+     border-top: none;
+     border-left: none;
+     border-right: none;
+     border-bottom: 2px solid white;
+     padding: 3px 10px;
+     margin-top: 50px;
+     width: 500px;
+     font-size: 20px;
+ }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+  .submitButton{
+      height: 50px;
+      width: 200px;
+      background-color: white;
+      color: black;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 100px;
+      margin-top: 30px;
+      cursor: pointer;
+      font-family: verizonBoldFont;
+  }
+  .submitButton:hover{
+    background-color: black;
+    border:2px solid white;
+    color:white;
+  }
+
+/* loading screen */
+
+@keyframes scaling{
+    0%, 100%{
+      transform: scale(0.2);
+      background-color: #ffffff;
+    }
+    40%{
+      transform: scale(1);
+      background-color: #ffffff;
+    }
+    50%{
+      transform: scale(1);
+      background-color: #ffffff;
+    }
+  }
+  
+ .loadingHeader{
+      color:white;
+      font-size: 40px;
+      font-weight: 600;
+      margin-bottom: 80px !important;
+      text-align: justify;
+      font-family: verizonBoldFont;
+  }
+
+  span {
+      height: 20px;
+      width: 20px;
+      border-radius:50%;
+      transform: scale(0);
+      animation: scaling 2.5s ease-in-out infinite;
+      display: inline-block;
+      margin:.5rem;
+  }
+  
+  span:nth-child(0){
+    animation-delay:0s;
+  }
+  span:nth-child(1){
+    animation-delay:0.2s;
+  }
+  span:nth-child(2){
+    animation-delay:0.4s;
+  }
+  span:nth-child(3){
+    animation-delay:0.6s;
+  }
+  span:nth-child(4){
+    animation-delay:0.8s;
+  }
+  span:nth-child(5){
+    animation-delay:1s;
+  }
+
+  .loadingContainer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .loadingContain{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+@media only screen and (max-width: 850px) {
+    .column {
+        float: left;
+        width: 100%;
+    }
+    .outerColumn {
+        float: left;
+        width: 100%;
+        min-height: fit-content;
+        padding-bottom: 50px;
+    }
+    .innerColumn {
+        float: left;
+        width: 100%;
+    }
+    .mapContainer{
+        padding:0px;
+        padding-bottom: 0px !important;
+        width: 97%;
+    }
+
+    /* open video call form */
+    .openVideoCallForm{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        overflow: scroll;
+        padding: 30px 0px;
+    }
+    
+    .alignCenter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        padding:30px 40px;
+        background-color: black;
+    }
+    input {
+        background-color: transparent;
+         color: #eeeeee;
+         outline: none;
+         outline-style: none;
+         border-top: none;
+         border-left: none;
+         border-right: none;
+         border-bottom: 2px solid white;
+         padding: 3px 10px;
+         margin-top: 30px;
+         width: 350px;
+         font-size: 20px;
+     }
+     select{
+        background-color: transparent;
+         color: #eeeeee;
+         outline: none;
+         outline-style: none;
+         border-top: none;
+         border-left: none;
+         border-right: none;
+         border-bottom: 2px solid white;
+         padding: 3px 10px;
+         margin-top: 30px;
+         width: 370px;
+         font-size: 20px;
+     }
+     .submitButton{
+        height: 40px;
+        width: 30%;
+        background-color: white;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 100px;
+        margin-top: 30px;
+        cursor: pointer;
+        font-family: verizonBoldFont;
+    }
+
+    /* loading screen */
+    .loadingHeader{
+        color:white;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 40px !important;
+    text-align: justify;
+    font-family: verizonBoldFont;
+    }
+    .loadingContainer {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        overflow: scroll;
+      }
+
+      .hideInMobile{
+        display: none;
+     }
+}
+

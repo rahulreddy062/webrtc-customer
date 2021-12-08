@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'verizonFont';
+    src: URL('./VERIZONNHGEDS-REGULAR.TTF') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'verizonBoldFont';
+    src: URL('./VERIZONNHGEDS-BOLD.TTF') format('truetype');
+}
+  
+.customerViewContainer{
+    width: 90%;
+    height: 90%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    font-family: verizonFont;
+}
+
+.customerViewLogoImage{
+    width: 150px;
+    height:50px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.customerViewRow{
+    padding: 50px;
+    padding-top: 0px;
+}
+.customerViewRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+.customerViewColumnLarge {
+  float: left;
+  width: 90%;
+  height: 50pc;
+  display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.customerViewColumnSmall {
+    float: left;
+    width: 10%;
+    height: 50pc;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.customerViewClientContainer{
+    height: 40pc;
+    width: 80%;
+    background-color: #666;
+    z-index: -1;
+}
+
+.customerViewCustomerContainer{
+    height: 230px;
+    width: 350px;
+    float: right;
+    margin-right: 13%;
+    margin-top: -250px;
+}
+
+.customerViewCustomerImage{
+    height: 230px;
+    width: 350px;
+}
+
+.overlayName{
+    color:white;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-top: -50px;
+    font-family: verizonBoldFont;
+}
+
+.customerViewIcon{
+    color:white;
+    font-size: 70px !important;
+}
+
+.customerViewIcon:hover{
+    transform: scale(1.07);
+}
+
+.customerViewIconCircle{
+   height: 110px;
+   width: 110px;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+.customerViewActive{
+    background-color: #3399ff;
+}
+
+.customerViewInactive{
+    background-color: red;
+}
+
+#customerViewCustomerVideoElement {
+    height: 230px;
+    width: 350px; 
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg); 
+    object-fit: cover
+}
+
+#customerViewClientVideoElement {
+    height: 100%;
+    width: 100%; 
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg); 
+    object-fit: cover
+}
+
+.hideElement{
+    display: none;
+}
+
+@media only screen and (max-width: 850px) {
+    .customerViewContainer{
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+    }
+    .customerViewRow{
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    .customerViewColumnLarge {
+        float: left;
+        width: 100%;
+        height: 100%;
+    }
+    .customerViewColumnSmall {
+        float: left;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        align-items: center;
+        height: 0px;
+        margin-top: -100px;
+    }
+    .customerViewClientContainer{
+        height: 100%;
+        width: 100%;
+        background-color: #666;
+    }
+
+.customerViewIcon{
+    color:white;
+    font-size: 50px !important;
+}
+
+.customerViewIconCircle{
+   height: 80px;
+   width: 80px;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+    .customerViewCustomerContainer{
+        display: none;
+     }
+     .hideInMobile{
+        display: none;
+     }
+}
+

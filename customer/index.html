@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueJeans</title>
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/customerView.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+<body>
+  <!-- top images -->
+  <div class="row">
+    <div class="column">
+      <img class="introImage" src="./assets/banner-1.png" />
+    </div>
+    <div class="column">
+      <img class="introImage" src="./assets/banner-2.png" />
+    </div>
+  </div>
+  <!-- 3 column section -->
+  <div class="row">
+    <!-- address column -->
+    <div class="outerColumn grey">
+      <div class="addSpace"></div>
+      <div class="container">
+        <h5>Verizon Company Store</h5>
+        <div class="spaceBetween">
+          <h1>Wauwatosa</h1>
+          <i class="fa fa-heart-o" id="iconSize"></i>
+        </div>
+        <div class="addSpace"></div>
+        <h5>11415W Burleigh St,</h5>
+        <h5>Suite 101,</h5>
+        <h5>Wauwatosa, WI,</h5>
+        <h5>53222</h5>
+        <div class="addSpace"></div>
+        <u>Change location</u>
+        <div class="addSpace"></div>
+        <i class="fa fa-video-camera actionLink" id="iconSize" onclick="openCloseVideoCallForm()">
+          <u style="font-weight: bold;padding-left: 5px;
+          font-family: verizonBoldFont;">Start a video call with in-store rep</u>
+        </i>
+        <div class="addSpace"></div>
+        <div class="spaceBetween">
+          <h5>Today:</h5>
+          <h5>Open until 7PM</h5>
+        </div>
+        <div class="addSpace"></div>
+        <div class="spaceBetween">
+          <h5>Tomorrow:</h5>
+          <h5>11AM - 7PM</h5>
+        </div>
+        <div class="addSpace"></div>
+        <u>See More</u>
+        <div class="addSpace"></div>
+        <hr>
+        </hr>
+        <div class="block">
+          <i class="fa fa-truck" id="iconSize"></i>
+          Curbside Pickup
+          <i class="fa fa-check" id="coloredIcon"></i>
+        </div>
+        <div class="block">
+          <i class="fa fa-shopping-bag" id="iconSize"></i>
+          In-Store Pickup
+          <i class="fa fa-check" id="coloredIcon"></i>
+        </div>
+        <p style="padding-top: 5px;color:black">Normally available for pickup within an hour</p>
+        <div class="addSpace"></div>
+        <div class="ratingRow">
+          <i class="ratingText">Rating: </i>
+          <i class="fa fa-star checked"></i>
+          <i class="fa fa-star checked"></i>
+          <i class="fa fa-star checked"></i>
+          <i class="fa fa-star unchecked"></i>
+          <i class="fa fa-star unchecked"></i>
+        </div>
+        <u style="float: right;">Reviews (53)</u>
+        <br />
+        <u style="margin-left: 20px;">Leave a Review</u>
+      </div>
+    </div>
+    <!-- googel map column -->
+    <div class="innerColumn">
+      <div class="mapContainer">
+        <div id="googleMap" class="googleMap"></div>
+      </div>
+    </div>
+    <!-- other links column -->
+    <div class="outerColumn">
+      <div class="container">
+        <i class="fa fa-truck actionLink" id="textAlignedIcon">
+          <u class="iconAlignedText">Get Directions</u>
+        </i>
+        </br>
+        <i class="fa fa-calendar actionLink" id="textAlignedIcon">
+          <u class="iconAlignedText">Schedule an appointment</u>
+        </i>
+        </br>
+        <i class="fa fa-calendar actionLink" id="textAlignedIcon">
+          <u class="iconAlignedText">Request a business sales appointment</u>
+        </i>
+        <div class="addSpace"></div>
+        <h5>By clicking on the link above, you represent that neither you nor anyone in your household have COVID19 or
+          its symptoms (e.g. fever, cough, shortness of breath)
+          or are being quarantined for suspected exposure to the virus.
+        </h5>
+        <br />
+        <h5>Occupancy limits may apply. You may need to wait outside or in your vehicle before going in. Non-vaccinated
+          customers and employees are required to use a
+          mask when visiting our stores. Please note: Verizon follows state and local requirements regarding mask use.
+          You may be required to wear a
+          mask even if you are fully vaccinated.
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- open video call request form -->
+  <div class="openVideoCallForm hideElement" id="openVideoCallForm">
+    <img src="./assets/verizon-logo.png" class="logoImage hideInMobile" />
+    <div class="alignCenter">
+      <h1 class="white">Please add a few details. You may be connected to another store for
+        faster service. Don't worry, you can see us but we can't see you.
+      </h1>
+      </br>
+      <div class="addSpace"></div>
+      <form onsubmit="submitForm(event)">
+        <input value="" placeholder="Your name" required id="callRequesterName" />
+        <input type="text" value="" pattern="[0-9]+" placeholder="Callback number" required id="callRequesterNumber" 
+        maxlength="10" minlength="10"  onkeypress="return onlyNumberKey(event)" />
+        <select placeholder="Reason for video call" required id="callRequestReason">
+          <option value="" disabled hidden selected>Reason for video call</option>
+          <option value="Inquire about new phone">Inquire about new phone</option>
+        </select>
+        <button class="submitButton">Connect</button>
+      </form>
+      <div class="addSpace"></div>
+      <p>*Video calls will use data allotment if connected to cellular data. Standard data rates
+        accoring to your cellular plan apply.
+      </p>
+    </div>
+  </div>
+
+  <!-- loading screen -->
+  <div class="loadingContainer hideElement" id="openLoadingScreen">
+    <div>
+      <h2 class="loadingHeader">Creating secure connection</h2>
+      <div class="loadingContain">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- customer view video call -->
+  <div class="customerViewContainer hideElement" id="customerViewContainer">
+    <img src="./assets/verizon-logo.png" class="customerViewLogoImage hideInMobile" />
+    <div class="customerViewRow">
+      <!-- remote view -->
+      <div class="customerViewColumnLarge">
+        <div class="customerViewClientContainer">
+          <video autoplay="true" id="customerViewClientVideoElement"></video>
+        </div>
+      </div>
+      <div class="customerViewColumnSmall">
+        <div class="customerViewIconCircle customerViewActive" id="myMic" onclick="audioChange()">
+          <i class="fa fa-microphone customerViewIcon"></i>
+        </div>
+        <div class="customerViewIconCircle customerViewActive" id="myVideo" onclick="videoChange()">
+          <i class="fa fa-video-camera customerViewIcon"></i>
+        </div>
+        <div class="customerViewIconCircle customerViewInactive" id="endVideoCall" onclick="endVideoCall()">
+          <i class="fa fa-times customerViewIcon"></i>
+        </div>
+      </div>
+    </div>
+    <!-- self view -->
+    <div class="customerViewCustomerContainer">
+      <video autoplay="true" id="customerViewCustomerVideoElement" muted></video>
+      <div id="imageElement" class="hideElement">
+        <img src="./assets/unknown-person.jpeg" class="customerViewCustomerImage" />
+        <div class="overlayName" id="customerName"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/index.js"></script>
+  <!-- google map api -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap" async defer></script>
+</body>
+
+</html>
