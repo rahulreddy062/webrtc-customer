@@ -135,7 +135,7 @@ function goToVideoChat() {
     try {
       userMediaStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
       
-      signaling = new WebSocket('wss://web-socket-5t519h0xl-rahulreddy062.vercel.app');
+      signaling = new WebSocket('wss://bitter-eagle-97.loca.lt');
       setTimeout(function(){peerConnection = createPeerConnection();
 
       addMessageHandler();
